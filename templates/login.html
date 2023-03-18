@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div>
+                <div class="image-card">
+                    <img src="static\css\images\background-web2.jpg">
+                </div>
+            </div>
+            <div class="detail-card">
+                <form action="/home" method="get">
+                    <input type="text" class="form-control" placeholder="Username" required><br>
+                    <input type="password" class="form-control" placeholder="Password" required><br>
+                    <input type="checkbox" name="remember">
+                    <label for="remember">remember me</label>
+                    <a href="/forgot" class="forget-password">
+                        <p>forgot password</p>
+                    </a>
+                    <input type="submit" class="button" value="Login" />
+                    <a href="/signup" class="sign-up">
+                        <p>create account</p>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

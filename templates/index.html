@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Mart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <nav>
+
+            <div class="nav-container-logo">
+                <ul>
+                    <li><a href="">
+                            <h1>APPLE MART</h1>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-left">
+                <ul>
+                    <li><a href="/home">
+                            <p>Home</p>
+                        </a></li>
+                    <li><a href="#deals">
+                            <p>Deals</p>
+                        </a></li>
+                    <li><a href="#categories">
+                            <p>Categories</p>
+                        </a></li>
+                    <li><a href="/store">
+                            <p>Store</p>
+                        </a></li>
+                    <!-- <li><a href="#about">
+                            <p>Contact</p>
+                        </a></li> -->
+                    <li><a href="#contact">
+                            <p>Contact</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-right">
+                <ul>
+                    <li class="cartcart">
+                        <p id="cart-icon">Cart</p>
+                    </li>
+                    <div class="cart">
+
+                        <h2 class="cart-title">CART</h2>
+                        <div class="cart-content">
+
+                        </div>
+                        <div class="total">
+                            <div class="total-title">TOTAL</div>
+                            <div class="total-price">₹0</div>
+                        </div>
+                        <a href="/info"><button type="button" class="btn-buy">ORDER</button></a>
+                        <i class="fa-regular fa-circle-xmark" id="close-cart"></i>
+                    </div>
+                    <li class="loginBtn"><a href="/" class="login">
+                            <p>Login</p>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="holder">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+
+                <div class="slide first">
+                    <img src="static/css/images/dynamic-2.jpeg">
+                </div>
+                <div class="slide">
+                    <img src="static/css/images/dynamic-5.jpg">
+                </div>
+                <div class="slide">
+                    <img src="static/css/images/dynamic-3.jpg">
+                </div>
+                <div class="slide">
+                    <img src="static/css/images/image-image-img.jpg">
+                </div>
+                <div class="slide">
+                    <img src="static/css/images/scroller-shoe.jpg">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------deals----------------------------------------------- -->
+
+    <div id="deals">
+        <div class="deals-head">
+            <h1>APPLE MART</h1>
+            <h2>SUPER SALE</h2>
+            <p>Sale ends in 00:00:00</p>
+        </div>
+        <div class="posters-holder">
+            <div class="poster-clip">
+                <div class="top-poster">
+                    <h1>SUPER SALE</h1>
+                    <p>LIMITED TIME ONLY</p>
+                    <p>UPTO 70% OFF ON SELECTED PRODUCTS</p>
+                    <form action="/offerwall" method="get">
+                        <input type="submit" class="button" value="Explore Now" />
+                    </form>
+                </div>
+            </div>
+            <div class="cardHolder">
+                <div class="card sunglass slide-in left">
+                    <div class="front">
+                        <img src="static/image/transEcom.png" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="image-card">
+                            <img src="static\css\images\tshirtDeals.jpg">
+                        </div>
+                        <div class="detail-card">
+                            <h2>T-SHIRTS</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum molestias dolorum dolor,
+                                sequi doloremque esse eos aut, quod ducimus excepturi doloribus et, natus expedita
+                                alias?</p>
+                            <form action="/offerwall" method="get">
+                                <input type="submit" class="button" value="Shop Now" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card jacket slide-in right">
+                    <div class="front">
+                        <img src="static/image/transEcom.png" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="image-card">
+                            <img src="static\css\images\jeansDeals.jpg">
+                        </div>
+                        <div class="detail-card">
+                            <h2>JEANS</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat quisquam commodi totam
+                                natus dolor corrupti veniam quibusdam officia adipisci ratione, aspernatur numquam iure
+                                magni deleniti.</p>
+                            <form action="/offerwall" method="get">
+                                <input type="submit" class="button" value="Shop Now" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card watch slide-in left">
+                    <div class="front">
+                        <img src="static/image/transEcom.png" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="image-card">
+                            <img src="static\css\images\watchDeals.jpg">
+                        </div>
+                        <div class="detail-card">
+                            <h2>WATCHES</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur eveniet voluptatem
+                                natus, recusandae sunt nobis amet numquam facilis totam veniam ab porro animi inventore
+                                quas?</p>
+                            <form action="/offerwall" method="get">
+                                <input type="submit" class="button" value="Shop Now" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card slide-in right">
+                    <div class="front">
+                        <img src="static/image/transEcom.png" alt="">
+                    </div>
+                    <div class="back">
+                        <div class="image-card">
+                            <img src="static\css\images\shoesDeals.jpg">
+                        </div>
+                        <div class="detail-card">
+                            <h2>SHOES</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis maiores, possimus,
+                                harum nesciunt itaque minima natus sunt, perferendis exercitationem eaque similique
+                                fugit dolorem nisi fuga.</p>
+                            <form action="/offerwall" method="get">
+                                <input type="submit" class="button" value="Shop Now" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------------------------------------categories--------------------------------- -->
+
+        <div id="categories">
+           
+            <div class="category-container">
+                <div class="category-text">
+                    <div class="ct-1 ct">
+                        <i class="fa-solid fa-truck"></i>
+                        <h1>Fast Delivery</h1>
+                        <p>Get Your Products in 2-4 Days of Order</p>
+                    </div>
+                    <div class="ct-2 ct">
+                        <i class="fa-solid fa-people-carry-box"></i>
+                        <h1>Easy Return</h1>
+                        <p>We assure a fast and easy return policy</p>
+                    </div>
+                    <div class="ct-3 ct">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <h1>Cash on Delivery</h1>
+                        <p>Pay Through Cash, Upi, Cards according to your convenience</p>
+                    </div>
+                </div>
+                <div class="categories-card-holder">
+                    <div class="card-cat slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/shoeTrans.png" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>SHOES</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="card-cat categories-card-2 slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/shirtTrans.webp" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>SHIRTS</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="card-cat categories-card-3 slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/tshirtTrans.png" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>T-SHIRTS</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="card-cat categories-card-4 slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/watchsTrans.png" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>WATCHES</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="card-cat categories-card-5 slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/sgg-removebg-preview.png" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>SUNGLASSES</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                    <div class="card-cat categories-card-6 slide-in">
+                        <div class="card-cat-img">
+                            <img src="static/image/jean-removebg-preview.png" alt="">
+                        </div>
+                        <div class="contentBx">
+                            <h2>JEANS</h2>
+                            <a href="/explore" class="signal">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------------------------------best selling--------------------------------------- -->
+        <div id="top-selling">
+            <div class="top-head">
+                <h1>TOP SELLING PRODUCTS</h1>
+                <p>Products on High Demand, Buy Before They Run Out of Stock</p>
+            </div>
+            <div class="top-selling-products">
+
+                {% for top in tops %}
+
+                <div class="shirt-holder">
+                    <div class="card-here card-top">
+                        <form method="post">
+                            <input type="hidden" name="path" value="{{ top.path }}">
+                            <div>
+                                <div class="image-card-top">
+                                    <img src="{{ top.path }}" class="product-img">
+                                </div>
+                            </div>
+                            <div class="detail-card-top">
+                                <div class="button-holder-top">
+                                    <div class="text-flex-top">
+                                        <h2 class="product-title">Name</h2>
+                                        <p class="price">Price</p>
+                                    </div>
+                                    <div class="btn-flex-top">
+                                        <input type="submit" value="View" class="btn-top">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <i class="fa-solid fa-cart-shopping add-cart"></i>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- ----------------------------------------about---------------------------------------------- -->
+        <div id="about">
+            <div class="aboutOne">
+                <div class="myimg">
+                    <img src="static/image/backTrans.png" alt="">
+                    <img src="static/image/myimg-1.png" alt="">
+                </div>
+                <div class="rightOne">
+                    <div class="rightSpace">
+
+                    </div>
+                    <div class="rightOnetxt slide-in">
+                        <div class="rightOnetxttxt">
+                            <h1>ABOUT !</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus est, veniam
+                                deleniti vel quod, ratione expedita impedit assumenda, qui neque quo aliquid asperiores?
+                                Amet harum iure molestiae culpa ex facilis.</p>
+                            <button class="portfolio">MY PORTFOLIO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mydetails">
+                    <div class="detailsTxt">
+                        <div class="dteailstxttxt slide-in">
+                            <h2>Hi, I'm</h2>
+                            <h2>Shuaib Afnan</h2>
+                            <p>A Web Developer and Data Scientist..</p>
+                            <div class="socialmedia">
+                                <img src="static/image/icons8-instagram.svg" alt="">
+                                <img src="static/image/icons8-twitter-48.png" alt="">
+                                <img src="static/image/icons8-discord-48.png" alt="">
+                                <img src="static/image/linkedin.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detailSpace">
+
+                    </div>
+                </div>
+            </div>
+            <div class="altLeft">
+                <div class="altUp-other">
+                    <h1>OTHER WORKS</h1>
+                </div>
+            </div>
+
+            <div class="aboutTwo">
+                <div class="twoLeft">
+                    <div class="twoleftImg slide-in">
+                        <img src="static/image/aero.jpg" alt="">
+                    </div>
+                    <div class="twoleftTxt slide-in">
+                        <h2>Predictive System</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur consequatur porro id ea
+                            officia architecto nihil natus ipsum, aspernatur tempora?</p>
+                        <div class="btnTwohold">
+                            <div class="btnBack">
+
+                            </div>
+                            <div class="btnUp">
+                                <h2>VIEW NOW</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="twoRight">
+                    <div class="tworightSmall slide-in">
+                        <h1>PREDICTORS</h1>
+                        <h2>Flight Price Predictor</h2>
+                        <h2>Stock Price Predictor</h2>
+                        <h2>Weather Forecasting</h2>
+                    </div>
+                    <div class="tworightlarge slide-in">
+                        <h1>Predictigo</h1>
+                    </div>
+                    <div class="tworightImg slide-in">
+                        <div class="img1">
+                            <img src="static/image/stock.jpg" alt="">
+                        </div>
+                        <div class="circlerightnone">
+
+                        </div>
+                        <div class="img2">
+                            <img src="static/image/weather.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutThree">
+                <div class="leftThree">
+                    <div class="txtThree">
+                        <h1>ANIME RECOMMENDER SYSTEM</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi et neque earum, sed facilis
+                            dolorem sapiente! Cum saepe molestias id aliquid aperiam voluptas minus! Non porro
+                            consectetur
+                            ut magni ipsam.</p>
+                        <div class="btnTwohold">
+                            <div class="btnBack">
+
+                            </div>
+                            <div class="btnUp">
+                                <h2>VIEW NOW</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightTwo">
+                    <div class="twoTrans">
+                        <img src="static/image/Transtrans.png" alt="">
+                    </div>
+                    <img src="static/image/animeAbout.jpeg" alt="">
+
+                    <div class="twoCir">
+
+                    </div>
+                    <div class="twoTranscir">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------------contact------------------------------------------- -->
+        <div class="altLeft">
+            <div class="altUp-member">
+                <h1>MEMBERSHIP</h1>
+            </div>
+        </div>
+        <div class="membership-holder">
+            <div class="memberCard">
+                <div class="Name">
+                    <h2>FREE</h2>
+                </div>
+                <div class="memberDetails">
+                    <div class="memberContent">
+                        <h2>$0<span>/month</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ipsam nulla dicta, velit
+                            praesentium consequuntur repellendus? Non ipsum, ipsa eaque aliquam labore beatae veritatis
+                            aut?</p>
+                        <a href="">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCard">
+                <div class="Name">
+                    <h2>BASIC</h2>
+                </div>
+                <div class="memberDetails">
+                    <div class="memberContent">
+                        <h2>$10<span>/month</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ipsam nulla dicta, velit
+                            praesentium consequuntur repellendus? Non ipsum, ipsa eaque aliquam labore beatae veritatis
+                            aut?</p>
+                        <a href="">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="memberCard">
+                <div class="Name">
+                    <h2>PREMIUM</h2>
+                </div>
+                <div class="memberDetails">
+                    <div class="memberContent">
+                        <h2>$25<span>/month</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ipsam nulla dicta, velit
+                            praesentium consequuntur repellendus? Non ipsum, ipsa eaque aliquam labore beatae veritatis
+                            aut?</p>
+                        <a href="">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="container-contact">
+                <div class="left-contact">
+                    <div class="head-para">
+                        <h2>HELLO THERE !</h2>
+                        <p>Let us Know More About You</p>
+                    </div>
+                    <div class="form-holder">
+                        <input type="text" class="input" placeholder="   FirstName   ">
+                        <input type="text" class="input" placeholder="   LastName   ">
+                        <input type="text" class="input" placeholder="   Email   ">
+                        <input type="text" class="input" placeholder="   Phone   ">
+                        <input type="text" class="message" placeholder="   Message   ">
+                    </div>
+                    <input type="button" value="submit" class="submit">
+                </div>
+                <div class="right-contact">
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex facilis porro placeat
+                        asperiores
+                        eveniet. Autem sequi fugit eum nesciunt, dolore officiis! Quae velit debitis natus dolor
+                        architecto necessitatibus enim repudiandae, molestiae earum doloribus, sunt sed ad
+                        pariatur. Eos
+                        maiores placeat quod ipsa ipsam accusamus ullam nam temporibus atque sint molestiae aut
+                        soluta,
+                        culpa dolorem praesentium blanditiis inventore, eius deleniti suscipit?</p>
+                    <h2>Contact</h2>
+                    <p><ion-icon name="call-outline"></ion-icon>7075818209</p>
+                    <p><ion-icon name="mail-outline"></ion-icon>shuaibafnansk@gmail.com</p>
+                    <h2>Follow</h2>
+                    <div class="icon">
+                        <a href="https://discordapp.com/users/736225575655440497"><span class="discord"><i
+                                    class="fa-brands fa-discord"></span></i></a>
+                        <a href="https://instagram.com/shuaib_11x?igshid=ZDdkNTZiNTM="><span class="insta"><i
+                                    class="fa-brands fa-instagram"></i></span></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/SatoruGojo1110"><span class="git"><i
+                                    class="fa-brands fa-github"></span></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="end">
+                <p>Made With <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </footer>
+
+
+
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

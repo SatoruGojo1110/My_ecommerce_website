@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Mart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/explore.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <nav>
+
+            <div class="nav-container-logo">
+                <ul>
+                    <li><a href="">
+                            <h1>APPLE MART</h1>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-left">
+                <ul>
+                    <li><a href="/home">
+                            <p>Home</p>
+                        </a></li>
+                    <li><a href="#deals">
+                            <p>Deals</p>
+                        </a></li>
+                    <li><a href="#categories">
+                            <p>Categories</p>
+                        </a></li>
+                    <li><a href="/store">
+                            <p>Store</p>
+                        </a></li>
+                    <li><a href="#contact">
+                            <p>Contact</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-right">
+                <ul>
+                    <li class="cartcart">
+                        <p id="cart-icon">Cart</p>
+                    </li>
+                    <div class="cart">
+
+                        <h2 class="cart-title">CART</h2>
+                        <div class="cart-content">
+
+                        </div>
+                        <div class="total">
+                            <div class="total-title">TOTAL</div>
+                            <div class="total-price">₹0</div>
+                        </div>
+                        <a href="/info"><button type="button" class="btn-buy">ORDER</button></a>
+                        <i class="fa-regular fa-circle-xmark" id="close-cart"></i>
+                    </div>
+                    <li class="loginBtn"><a href="/" class="login">
+                            <p>Login</p>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="space">
+        <div>
+
+        </div>
+    </div>
+    <div class="ripped-effect">
+        <div class="normal-img">
+            <img src="static/css/images/shirtss.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>SHIRTS</h1>
+            <p>Our range of Shirts</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>Shirts</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>Shirts You Don't Wanna Miss Out On</h2>
+                        <button><a href="#shirt">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/1F454_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Hawaiian</h2>
+                        <p>Starting From 799/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shirt-explore-7.jpeg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Formal</h2>
+                        <p>Starting From 1199/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shirt-explore-tag.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Knitted</h2>
+                        <p>Starting From 999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shirt-explore-tag-1.jpeg">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality Shirts</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        {% for shirt in shirts %}
+        <div class="shirt-holder" id="shirt">
+            <div class="shirt card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shirt.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shirt.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    <div class="ripped-effect-alt">
+        <div class="normal-img">
+            <img src="static/css/images/shoe.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>SHOES</h1>
+            <p>Our range of Shoes</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>Shoes</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>Shoes You Don't Wanna Miss Out On</h2>
+                        <button><a href="#shoes">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/1F45F_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Jordans</h2>
+                        <p>Starting From 3999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shoe-tag.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Sneakers</h2>
+                        <p>Starting From 1699/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shoe-tag-1.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Threaded</h2>
+                        <p>Starting From 799/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shoe-tag-2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality Shoes</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        {% for shoe in shoes %}
+        <div class="shoe-holder" id="shoes">
+            <div class="shoe card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shoe.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shoe.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="ripped-effect-alt">
+        <div class="normal-img">
+            <img src="static/css/images/jean.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>JEANS</h1>
+            <p>Our range of Jeans</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>Jeans</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>Jeans You Don't Wanna Miss Out On</h2>
+                        <button><a href="#jeans">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/1F456_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Jogger-Jeans</h2>
+                        <p>Starting From 1299/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/jeans-tag-2.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Slim-Fit</h2>
+                        <p>Starting From 999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/slim-fit.avif">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Tapered-Fit</h2>
+                        <p>Starting From 1599/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/tapaered-fit.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality Jeans</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        {% for jean in jeans %}
+        <div class="jean-holder" id="jeans">
+            <div class="jean card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ jean.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ jean.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="ripped-effect-alt">
+        <div class="normal-img">
+            <img src="static/css/images/sunglass.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>SUNGLASSES</h1>
+            <p>Our range of Sunglasses</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>Sunglasses</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>Sunglasses You Don't Wanna Miss Out On</h2>
+                        <button><a href="#sunglasses">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/1F97D_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Round</h2>
+                        <p>Starting From 1299/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/sunglass-tag-1.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Club-Master</h2>
+                        <p>Starting From 1999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/sunglass-tag.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Rectangular</h2>
+                        <p>Starting From 999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/sunglass-tag-2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality Sunglasses</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        {% for shades in sunglasses %}
+        <div class="shades-holder" id="sunglasses">
+            <div class="shades card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shades.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shades.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="ripped-effect-alt">
+        <div class="normal-img">
+            <img src="static/css/images/watch.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>WATCHES</h1>
+            <p>Our range of Watches</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>Watches</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>Watches You Don't Wanna Miss Out On</h2>
+                        <button><a href="#watch">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/231A_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Analog</h2>
+                        <p>Starting From 1499/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/watch-tag.webp">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Chronograph</h2>
+                        <p>Starting From 1999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/watch-tag-1.webp">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Swiss</h2>
+                        <p>Starting From 2499/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/watch-tag-2.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality Watches</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex">
+        {% for watch in watches %}
+        <div class="watch-holder" id="watch">
+            <div class="watch card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ watch.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ watch.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="ripped-effect-alt">
+        <div class="normal-img">
+            <img src="static/css/images/tshirts.jpg" alt="">
+        </div>
+        <div class="desc-img">
+            <h1>T-SHIRTS</h1>
+            <p>Our range of T-Shirts</p>
+        </div>
+        <div class="ripped-img">
+            <img src="static/css/images/ripped.png" alt="">
+        </div>
+    </div>
+    <div class="cardInfoHolder">
+        <div class="infoUp-alt">
+            <div class="infoUpleft">
+                <div class="partOne">
+                    <h2>T-Shirts</h2>
+                    <p>Categories</p>
+                </div>
+                <div class="partTwo">
+                    <div>
+                        <h2>T-Shirts You Don't Wanna Miss Out On</h2>
+                        <button><a href="#tshirt">View Now </a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="infoUpright">
+                <img src="static/css/images/1F455_color.png">
+            </div>
+        </div>
+        <div class="infoDown">
+            <div class="infoDownleft">
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Hoodies</h2>
+                        <p>Starting From 999/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/tshirt-explore-7.jpg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Polo</h2>
+                        <p>Starting From 499/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/tshirt-explore-1.jpeg">
+                    </div>
+                </div>
+                <div class="infoCard">
+                    <div class="cardText">
+                        <h2>Henley</h2>
+                        <p>Starting From 799/-</p>
+                    </div>
+                    <div class="infoCardimg">
+                        <img src="static/image/shirt-explore-9.jpeg">
+                    </div>
+                </div>
+            </div>
+            <div class="infoDownright">
+                <div>
+                    <h2>The Most Affordable and Best Quality T-Shirts</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, voluptate? Labore nihil illum
+                        veniam cum. Fugit veniam alias dolores! Obcaecati.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        {% for tshirt in tshirts %}
+        <div class="tshirt-holder" id="tshirt">
+            <div class="tshirt card slide-in">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ tshirt.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ tshirt.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="add-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+    <footer>
+        <div class="end">
+            <p>Made With <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </footer>
+
+
+
+    <!-- --------------------------icons---------------------------- -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+
+</body>
+
+</html>

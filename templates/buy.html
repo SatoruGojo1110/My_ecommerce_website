@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Mart</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/buy.css') }}">
+  <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <nav>
+
+      <div class="nav-container-logo">
+        <ul>
+          <li><a href="">
+              <h1>APPLE MART</h1>
+            </a></li>
+        </ul>
+      </div>
+      <div class="nav-container-left">
+        <ul>
+          <li><a href="/home">
+              <p>Home</p>
+            </a></li>
+          <li><a href="#deals">
+              <p>Deals</p>
+            </a></li>
+          <li><a href="#categories">
+              <p>Categories</p>
+            </a></li>
+          <li><a href="/store">
+              <p>Store</p>
+            </a></li>
+          <li><a href="#contact">
+              <p>Contact</p>
+            </a></li>
+        </ul>
+      </div>
+      <div class="nav-container-right">
+        <ul>
+          <li class="cartcart">
+            <p id="cart-icon">Cart</p>
+          </li>
+          <div class="cart">
+
+            <h2 class="cart-title">CART</h2>
+            <div class="cart-content">
+
+            </div>
+            <div class="total">
+              <div class="total-title">TOTAL</div>
+              <div class="total-price">₹0</div>
+            </div>
+            <a href="/info"><button type="button" class="btn-buy">ORDER</button></a>
+            <i class="fa-regular fa-circle-xmark" id="close-cart"></i>
+          </div>
+          <li class="loginBtn"><a href="/" class="login">
+              <p>Login</p>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="flex-container">
+    <div class="holder">
+      <div class="card">
+        <div>
+          <div class="image-card">
+            <img src="{{ path }}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="detail-card">
+        <div class="text-flex">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+            class="fa-solid fa-star"></i><i class="fa-solid fa-star active-star"></i>
+          <h2>Product Name</h2>
+          <p class="price"><span class="offer-price"><i class="fa-solid fa-indian-rupee-sign"></i>999</span><i
+              class="fa-solid fa-indian-rupee-sign"></i>999</p>
+          <h2>Product Details :</h2>
+          <p class="text-of-details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores reprehenderit
+            accusantium unde eveniet
+            quod blanditiis beatae, dolores recusandae odio nihil tempora culpa labore! A, distinctio consequatur!
+            Deleniti, in. Sint officiis facilis odio recusandae maiores ducimus aut facere, voluptates molestias
+            delectus blanditiis dolore ea ex, odit omnis consectetur minima enim soluta?</p>
+          <h1>Select Your Size :</h1>
+          <input type="button" class="size active" value="S"><input type="button" class="size" value="M"><input
+            type="button" class="size" value="L"><input type="button" class="size" value="XL">
+          <div class="btn-holder">
+            <a href="">
+              <input type="button" class="addtocart" value="Add To Cart">
+            </a>
+            <div class="wishlist">
+              <a href=""><ion-icon name="heart-outline"></ion-icon></a>
+            </div>
+          </div>
+          <div class="buy-btn">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam quo facere dolores unde veniam ratione
+              ad laboriosam, animi error aut.</p>
+            <a href="/info">
+              <input type="button" class="order-btn" value="Order">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="coupon-heading">
+    <h1>COUPONS</h1>
+  </div>
+  <div class="coupons-holder">
+    <div class="coupon">
+      <div class="coupon-detail">
+        <h2>DISCOUNT COUPON</h2>
+        <h1>25% OFF</h1>
+        <div class="coupon-name">
+          <p>ON SHOES</p>
+        </div>
+        <div class="coupon-txt">
+          <p>Applicable on orders above ₹1500, Maximum cashback upto ₹500</p>
+        </div>
+        <div class="coupon-btn">
+          <button class="apply">
+            <p>Apply</p>
+          </button>
+        </div>
+      </div>
+      <div class="coupon-image">
+        <img src="static/image/coupon-base.webp" alt="">
+      </div>
+    </div>
+    <div class="coupon">
+      <div class="coupon-detail">
+        <h2>DISCOUNT COUPON</h2>
+        <h1>25% OFF</h1>
+        <div class="coupon-name">
+          <p>ON ALL PRODUCTS
+          <p>
+        </div>
+        <div class="coupon-txt">
+          <p>Applicable on orders above ₹5000, Maximum cashback upto ₹1000</p>
+        </div>
+        <div class="coupon-btn">
+          <button class="apply">
+            <p>Apply</p>
+          </button>
+        </div>
+      </div>
+      <div class="coupon-image">
+        <img src="static/image/coupon-base.webp" alt="">
+      </div>
+    </div>
+    <div class="coupon">
+      <div class="coupon-detail">
+        <h2>DISCOUNT COUPON</h2>
+        <h1>10% OFF</h1>
+        <div class="coupon-name">
+          <p>ON SHIRTS</p>
+        </div>
+        <div class="coupon-txt">
+          <p>Applicable on orders above ₹1000, Maximum cashback upto ₹250</p>
+        </div>
+        <div class="coupon-btn">
+          <button class="apply">
+            <p>Apply</p>
+          </button>
+        </div>
+      </div>
+      <div class="coupon-image">
+        <img src="static/image/coupon-base.webp" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="coupon-code">
+    <h2>Have A Coupon Code</h2>
+    <input type="text" id="coupon-space">
+    <div class="coupon-btn">
+      <button class="apply">
+        <p>Apply</p>
+      </button>
+    </div>
+  </div>
+  <div class="container-similar-products">
+    <div class="similar-products-holder">
+      <h1>SIMILAR PRODUCTS</h1>
+    </div>
+    <div class="flex">
+      {% for filename in result %}
+
+      <div class="card-holder">
+        <div class="card-small">
+          <form method="post">
+            <input type="hidden" name="path" value="{{ filename.path }}">
+            <div>
+              <div class="image-card">
+                <img src="{{ filename }}" class="product-img">
+              </div>
+            </div>
+            <div class="detail-card-small">
+              <div class="button-holder-small">
+                <div class="text-flex-small">
+                  <h2 class="product-title">Name</h2>
+                  <p class="price">Price</p>
+                </div>
+                <div class="btn-flex">
+                  <input type="submit" value="View" class="btn">
+                </div>
+              </div>
+            </div>
+          </form>
+          <i class="fa-solid fa-cart-shopping add-cart"></i>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="rating-holder">
+      <div class="rate-left">
+        <h1>Rate This Product !</h1>
+        <p>1100 users have already rated this product</p>
+        <p>Average rating : 4.20 out of 5 <i class="fa-regular fa-face-smile-beam"></i></p>
+      </div>
+      <div class="rate-right">
+        <div class="rate">
+          <i class="fa-regular fa-face-angry ratemoji"></i>
+        </div>
+        <div class="rate">
+          <i class="fa-regular fa-face-frown-open ratemoji"></i>
+        </div>
+        <div class="rate">
+          <i class="fa-regular fa-face-meh ratemoji"></i>
+        </div>
+        <div class="rate">
+          <i class="fa-regular fa-face-smile ratemoji"></i>
+        </div>
+        <div class="rate">
+          <i class="fa-regular fa-face-laugh-wink ratemoji"></i>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="end">
+        <p>Made With <i class="fa-solid fa-heart"></i></p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

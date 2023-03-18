@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div>
+                <div class="image-card">
+                    <img src="static\css\images\background-web2.jpg">
+                </div>
+            </div>
+            <div class="detail-card">
+                <form action="/" method="get">
+                    <input type="text" class="form-control" placeholder="Username" required><br>
+                    <input type="text" class="form-control" placeholder="Email" required><br>
+                    <input type="password" class="form-control" placeholder="Password" required><br>
+                    <input type="checkbox" class="remember" name="remember" required>
+                    <label for="remember">I read and agree to Terms & Conditions</label>
+                    <div class="button-is-not-centering">
+                        <input type="submit" class="button" value="Signup" />
+                    </div>
+                    <div class="alts">
+                        <a href="https://myaccount.google.com"><i class="fa-brands fa-google"></i></a>
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="already-acc">
+                        <p>Already Have an Account ? <a href="/" class="already">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

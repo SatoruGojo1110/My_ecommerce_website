@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Mart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/store.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <nav>
+
+            <div class="nav-container-logo">
+                <ul>
+                    <li><a href="">
+                            <h1>APPLE MART</h1>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-left">
+                <ul>
+                    <li><a href="/home">
+                            <p>Home</p>
+                        </a></li>
+                    <li><a href="#deals">
+                            <p>Deals</p>
+                        </a></li>
+                    <li><a href="#categories">
+                            <p>Categories</p>
+                        </a></li>
+                    <li><a href="/store">
+                            <p>Store</p>
+                        </a></li>
+                    <li><a href="#contact">
+                            <p>Contact</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-container-right">
+                <ul>
+                    <li class="cartcart">
+                        <p id="cart-icon">Cart</p>
+                    </li>
+                    <div class="cart">
+
+                        <h2 class="cart-title">CART</h2>
+                        <div class="cart-content">
+
+                        </div>
+                        <div class="total">
+                            <div class="total-title">TOTAL</div>
+                            <div class="total-price">₹0</div>
+                        </div>
+                        <a href="/info"><button type="button" class="btn-buy">ORDER</button></a>
+                        <i class="fa-regular fa-circle-xmark" id="close-cart"></i>
+                    </div>
+                    <li class="loginBtn"><a href="/" class="login">
+                            <p>Login</p>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="poster-1">
+        <img src="static/image/shirt-post-1.jpg">
+    </div>
+    <h1 class="head">SHIRTS</h1>
+    <p class="tail">The Newest Collection of Branded Shirts</p>
+    <div class="flex">
+        {% for shirt in shirts %}
+        <div class="shirt-holder">
+            <div class="shirt card">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shirt.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shirt.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="poster-1">
+        <img src="static/image/shoe-poster.jpg">
+    </div>
+    <h1 class="head">SHOES</h1>
+    <p class="tail">The Newest Collection of Branded Shoes</p>
+    <div class="flex">
+        {% for shoe in shoes %}
+        <div class="shoe-holder">
+            <div class="shoe card">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shoe.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shoe.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="poster-1">
+        <img src="static/image/bag-card.webp">
+    </div>
+    <h1 class="head">HANDBAGS</h1>
+    <p class="tail">The Newest Collection of Branded Handbags</p>
+    <div class="flex">
+        {% for bag in handbags %}
+        <div class="bag-holder">
+            <div class="bag card">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ bag.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ bag.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="poster-1">
+        <img src="static/image/sgposter11.jpg">
+    </div>
+    <h1 class="head">SUNGLASSES</h1>
+    <p class="tail">The Newest Collection of Branded Sunglasses</p>
+    <div class="flex">
+        {% for shades in sunglasses %}
+        <div class="shades-holder">
+            <div class="shades card">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ shades.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ shades.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="poster-1">
+        <img src="static/image/watch-card.jpg">
+    </div>
+    <h1 class="head">WATCHES</h1>
+    <p class="tail">The Newest Collection of Branded Watches</p>
+    <div class="flex">
+        {% for watch in watches %}
+        <div class="watch-holder">
+            <div class="watch card">
+                <form method="post">
+                    <input type="hidden" name="path" value="{{ watch.path }}">
+                    <div>
+                        <div class="image-card">
+                            <img src="{{ watch.path }}" class="product-img">
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="button-holder">
+                            <div class="text-flex">
+                                <h2 class="product-title">Name</h2>
+                                <p class="price">Price</p>
+                            </div>
+                            <div class="btn-flex">
+                                <input type="submit" value="View" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <i class="fa-solid fa-cart-shopping add-cart"></i>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <footer>
+        <div class="end">
+            <p>Made With <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </footer>
+
+
+
+    <!-- --------------------------icons---------------------------- -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

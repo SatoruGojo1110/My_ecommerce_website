@@ -1,0 +1,278 @@
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@200&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+body {
+    color: white;
+    overflow-x: hidden;
+    background: white;
+    background-blend-mode: normal, color-burn;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Labrada', serif;
+    font-family: 'Shantell Sans', cursive;
+}
+
+nav {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.back-button {
+    width: 250px;
+    height: 20px;
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+.back-button a {
+    text-decoration: none;
+}
+.back-button p {
+    color: black;
+    font-size: large;
+    font-weight: 600;
+}
+
+.back-button p:hover {
+    color: white;
+}
+.back-button i {
+    margin-right: 10px;
+}
+.something {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 100%;
+    height: 45px;
+}
+
+.something i {
+    margin-left: 10px;
+}
+
+.nav-here {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.card-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 600px;
+    background: white;
+    position: relative;
+    bottom: 75px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-head {
+    display: flex;
+    color: black;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+
+.head-left {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    border-right: 2px solid black;
+    font-weight: 500;
+}
+
+.head-right {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.process {
+    width: 100px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.process h1 {
+    font-size: large;
+
+}
+
+.process-here {
+
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.back-btn {
+    margin: 15px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: medium;
+    flex-direction: row;
+    background:#f8f7ff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transition: 0.5s;
+}
+
+.back-btn a {
+    text-decoration: none;
+}
+.back-btn i {
+    margin-right: 5px;
+}
+
+.back-btn p {
+    color: black;
+}
+
+.back-btn:hover {
+    transform: translateX(-5px);
+}
+
+.addressform {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+}
+
+.form-address-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-head {
+    width: 350px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f7ff;
+    font-size: large;
+}
+
+.form-head::placeholder {
+    padding: 5px;
+}
+
+.addtxt {
+    width: 96%;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f7ff;
+    font-size: large;
+}
+
+
+.addtxt::placeholder {
+    padding: 5px;
+}
+
+.form-tail {
+    width: 230px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f7ff;
+    font-size: large;
+}
+
+.form-tail::placeholder {
+    padding: 5px;
+}
+
+.form-address-tail {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.form-address-tail a {
+    text-decoration: none;
+}
+.checkbox-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 25px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.checkbox-form p {
+    margin-left: 5px;
+    position: relative;
+    bottom: 4px;
+    font-size: larger;
+}
+.next-slide {
+    width: 150px;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f7ff;
+    transition: 1s;
+
+}
+
+.next-slide p {
+    color: black;
+    font-size: large;
+}
+
+.next-slide:hover {
+    background: rgba(0, 0, 0,0.4);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/address.css') }}">
+    <script src="https://kit.fontawesome.com/0cdc049c53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav>
+        
+        <div class="nav-there">
+            <div class="back-button">
+                <a href="/store">
+                    <p><i class="fa-solid fa-arrow-left"></i>Back To Store</p>
+                </a>
+            </div>
+            <h2 class="something">ADDRESS <i class="fa-solid fa-map-location-dot"></i></h2>
+        </div>
+        <div class="nav-here">
+            <h1 class="address-head">Fill Out Your Where About's</h1>
+        </div>
+    </nav>
+
+    <div class="card-holder">
+        <div class="card">
+            <div class="card-head">
+                <div class="head-left">
+                    <h2>NEED HELP?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, distinctio.</p>
+                    <p>7075818209</p>
+                    <p>shuaibafnansk@gmail.com</p>
+                </div>
+                <div class="head-right">
+                    <div class="process">
+                        <h1>CART</h1>
+                    </div>
+                    <div class="process process-here">
+                        <h1>ADDRESS</h1>
+                    </div>
+                    <div class="process">
+                        <h1>PAYMENT</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="back-btn">
+                <a href="/store">
+                    <p><i class="fa-solid fa-arrow-left"></i>BACK</p>
+                </a>
+            </div>
+            <div class="addressform">
+                <div class="form-address-head">
+                    <input type="text" class="form-head" placeholder="FirstName" required>
+                    <input type="text" class="form-head" placeholder="LastName" required>
+                    <input type="number" class="form-head" placeholder="Phone" required>
+                    <input type="text" class="form-head" placeholder="Email" required>
+                    <input type="text" class="addtxt" placeholder="Address(Area and Street)">
+                    <input type="number" class="form-tail" placeholder="Pincode" required>
+                    <input type="text" class="form-tail" placeholder="District">
+                    <input type="text" class="form-tail" placeholder="State">
+                </div>
+            </div>
+            <div class="checkbox-form">
+                <input type="checkbox" class="save-add">
+                <p class="save-address">Save My Address</p>
+            </div>
+                <div class="form-address-tail">
+                <button class="next-slide"><a href="/payment">
+                        <p>Proceed</p>
+                    </a></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
